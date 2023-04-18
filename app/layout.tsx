@@ -1,7 +1,9 @@
-import Link from 'next/link';
 import './globals.css';
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
+import { Alata } from 'next/font/google';
+
+const alata = Alata({ weight: '400', preload: false });
 
 export const metadata = {
 	title: 'Loopstudios',
@@ -18,7 +20,7 @@ export default function RootLayout({
 }) {
 	return (
 		<html lang='en'>
-			<body>
+			<body className={alata.className}>
 				<Header />
 				<main>{children}</main>
 				<Footer />
