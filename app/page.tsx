@@ -1,25 +1,10 @@
-import Image from 'next/image';
-import { Josefin_Sans } from 'next/font/google';
-
-const josefin = Josefin_Sans({ weight: '300', preload: false });
+import Hero from '@/components/Hero';
 
 export default function Home() {
 	return (
-		<div>
-			<section>
-				<Image
-					src='/images/desktop/image-hero.jpg'
-					alt='image hero'
-					sizes='(max-width: 1440px) 100vw,
-          (max-width: 1200px) 50vw,
-          33vw'
-					width={2000}
-					height={560}
-				></Image>
-				<h1 className={josefin.className}>
-					Immersive experiences that deliver
-				</h1>
-			</section>
+		<>
+			<Hero />
+
 			<section>
 				<div></div>
 				<div>
@@ -37,6 +22,6 @@ export default function Home() {
 				<button>See All</button>
 				<div></div>
 			</section>
-		</div>
+		</>
 	);
 }

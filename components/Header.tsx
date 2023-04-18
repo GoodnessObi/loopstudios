@@ -4,7 +4,7 @@ import Image from 'next/image';
 import styled from 'styled-components';
 
 const Wrapper = styled.div`
-	width: 80%;
+	width: 77%;
 	margin: 0 auto;
 `;
 
