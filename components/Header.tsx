@@ -1,12 +1,6 @@
 'use client';
 import Link from 'next/link';
 import Image from 'next/image';
-import styled from 'styled-components';
-
-const Wrapper = styled.div`
-	width: 77%;
-	margin: 0 auto;
-`;
 
 const NavBar = styled.nav`
 	padding: 4rem 0 2rem;
@@ -53,7 +47,8 @@ const NavLink = styled(Link)`
 	}
 `;
 
-export default function Header() {
+export default function Header({ ...props }) {
+	const Wrapper = props.Wrapper;
 	return (
 		<NavBar>
 			<Wrapper>
