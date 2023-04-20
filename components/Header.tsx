@@ -32,7 +32,7 @@ export default function Header({ ...props }) {
 							height={32}
 						></Image>
 					</Link>
-					<div className='flex justify-end items-center '>
+					<nav className='flex justify-end items-center '>
 						<Link className='my-0 mx-4 relative pb-3 text-white' href='#'>
 							About
 						</Link>
@@ -48,7 +48,7 @@ export default function Header({ ...props }) {
 						<Link className='my-0 mx-4 relative pb-3 text-white' href='#'>
 							Support
 						</Link>
-					</div>
+					</nav>
 				</div>
 			</div>
 		</section>
