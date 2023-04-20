@@ -1,5 +1,6 @@
 import Link from 'next/link';
 import Image from 'next/image';
+import { navList } from '@/lib/data';
 
 // 	&:hover,
 // 	&:active {
@@ -33,21 +34,15 @@ export default function Header({ ...props }) {
 						></Image>
 					</Link>
 					<nav className='flex justify-end items-center '>
-						<Link className='my-0 mx-4 relative pb-3 text-white' href='#'>
-							About
-						</Link>
-						<Link className='my-0 mx-4 relative pb-3 text-white' href='#'>
-							Careers
-						</Link>
-						<Link className='my-0 mx-4 relative pb-3 text-white' href='#'>
-							Events
-						</Link>
-						<Link className='my-0 mx-4 relative pb-3 text-white' href='#'>
-							Products
-						</Link>
-						<Link className='my-0 mx-4 relative pb-3 text-white' href='#'>
-							Support
-						</Link>
+						{navList.map((item, index) => (
+							<Link
+								key={index}
+								className='my-0 mx-4 relative pb-3 text-white'
+								href={item.path}
+							>
+								{item.name}
+							</Link>
+						))}
 					</nav>
 				</div>
 			</div>

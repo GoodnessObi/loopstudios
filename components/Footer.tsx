@@ -1,5 +1,6 @@
 import Image from 'next/image';
 import Link from 'next/link';
+import { navList } from '@/lib/data';
 
 export default function Footer() {
 	return (
@@ -16,21 +17,15 @@ export default function Footer() {
 							></Image>
 						</Link>
 						<nav className='flex justify-end items-center mt-4'>
-							<Link className='my-0 mr-4 relative pb-3 text-white' href='#'>
-								About
-							</Link>
-							<Link className='my-0 mx-4 relative pb-3 text-white' href='#'>
-								Careers
-							</Link>
-							<Link className='my-0 mx-4 relative pb-3 text-white' href='#'>
-								Events
-							</Link>
-							<Link className='my-0 mx-4 relative pb-3 text-white' href='#'>
-								Products
-							</Link>
-							<Link className='my-0 mx-4 relative pb-3 text-white' href='#'>
-								Support
-							</Link>
+							{navList.map((item, index) => (
+								<Link
+									key={index}
+									className='my-0 mr-4 relative pb-3 text-white'
+									href={item.path}
+								>
+									{item.name}
+								</Link>
+							))}
 						</nav>
 					</div>
 					<div>
@@ -53,7 +48,7 @@ export default function Footer() {
 							</Link>
 							<Link href='/' className='inline-block mr-4'>
 								<Image
-									src='/images/icon-pinterest.svg'
+									src='/images/icon-facebook.svg'
 									alt='logo'
 									width={24}
 									height={24}
@@ -61,7 +56,7 @@ export default function Footer() {
 							</Link>
 							<Link href='/' className='inline-block mr-4'>
 								<Image
-									src='/images/icon-instagram.svg'
+									src='/images/icon-twitter.svg'
 									alt='logo'
 									width={24}
 									height={24}

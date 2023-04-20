@@ -1,6 +1,5 @@
-import Image from 'next/image';
-import Link from 'next/link';
 import ProductCard from './ProductCard';
+import { products } from '@/lib/data';
 
 export default function Products() {
 	return (
@@ -11,14 +10,9 @@ export default function Products() {
 					<button>See More</button>
 				</div>
 				<div className='grid grid-cols-4 gap-y-4'>
-					<ProductCard />
-					<ProductCard />
-					<ProductCard />
-					<ProductCard />
-					<ProductCard />
-					<ProductCard />
-					<ProductCard />
-					<ProductCard />
+					{products.map((product, index) => (
+						<ProductCard key={index} product={product} />
+					))}
 				</div>
 			</div>
 		</section>
