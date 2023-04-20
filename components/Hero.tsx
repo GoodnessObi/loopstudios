@@ -1,40 +1,24 @@
-'use client';
-import styled from 'styled-components';
-import Image from 'next/image';
-
-const HeroSection = styled.section`
-	height: 560px;
-	width: 100vw;
-`;
-
-const ImageWrapper = styled.section`
-	height: 560px;
-	width: 100vw;
-	position: relative;
-	z-index: -1;
-`;
-const TitleOne = styled.h1`
-	position: relative;
-	border: 1px solid white;
-	color: #fff;
-	text-transform: uppercase;
-	font-size: 4rem;
-	padding: 2rem;
-	width: 57%;
-`;
-
-const FlexWrapper = styled.div`
-	display: flex;
-	align-items: center;
-	height: 100%;
-`;
-
-export default function Hero({ ...props }) {
-	const Wrapper = props.Wrapper;
+export default function Hero() {
 	return (
-		<HeroSection>
-			<ImageWrapper>
-				<Image
+		<section className='w-screen h-[560px]'>
+			<div
+				className='relative w-full h-full -z-[1]'
+				style={{
+					backgroundImage: `url("/images/desktop/image-hero.jpg")`,
+					height: '100%',
+					width: '100%',
+					backgroundRepeat: 'no-repeat',
+					backgroundSize: 'cover',
+				}}
+			>
+				<div className='container'>
+					<div className='flex items-center h-full'>
+						<h1 className='p-8 border border-white text-6xl uppercase text-white w-5/12'>
+							Immersive experiences that deliver
+						</h1>
+					</div>
+				</div>
+				{/* <Image
 					src='/images/desktop/image-hero.jpg'
 					alt='image hero'
 					sizes='(max-width: 1440px) 100vw,
@@ -42,16 +26,8 @@ export default function Hero({ ...props }) {
       33vw'
 					objectFit='cover'
 					layout='fill'
-				></Image>
-			</ImageWrapper>
-
-			<Wrapper>
-				<FlexWrapper>
-					<TitleOne className={props.secondaryFont.className}>
-						Immersive experiences that deliver
-					</TitleOne>
-				</FlexWrapper>
-			</Wrapper>
-		</HeroSection>
+				></Image> */}
+			</div>
+		</section>
 	);
 }

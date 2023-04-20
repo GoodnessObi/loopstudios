@@ -4,11 +4,10 @@ import { Josefin_Sans } from 'next/font/google';
 const josefin = Josefin_Sans({ weight: '300', preload: false });
 
 export default function Home({ ...props }) {
-	const Wrapper = props.Wrapper;
 	return (
 		<>
 			<Hero />
-			<About />
+			{/* <About /> */}
 			<section>
 				<h2>Our creations</h2>
 				<button>See All</button>
