@@ -20,7 +20,7 @@ export default function Footer() {
 							{navList.map((item, index) => (
 								<Link
 									key={index}
-									className='my-0 mr-4 relative pb-3 text-white mb-4 md:mb-0'
+									className='my-0 mr-4 relative pb-3 text-white mb-4 md:mb-0 hover:after:link-active active:after:link-active'
 									href={item.path}
 								>
 									{item.name}

@@ -1,7 +1,7 @@
 import Image from 'next/image';
-import { Josefin_Sans } from 'next/font/google';
+// import { Josefin_Sans } from 'next/font/google';
 
-const josefin = Josefin_Sans({ weight: '300', preload: false });
+// const josefin = Josefin_Sans({ weight: '300', preload: false });
 
 export default function About() {
 	return (
@@ -16,7 +16,7 @@ export default function About() {
 							height={500}
 						></Image>
 					</div>
-					<div className='absolute w-2/4 p-5 pb-0 bg-white bottom-0 right-0'>
+					<div className='md:absolute md:w-2/4 p-5 pb-0 bg-white bottom-0 right-0 text-center md:text-start'>
 						<h2 className='uppercase pb-8 text-5xl'>
 							The leader in interactive vr
 						</h2>

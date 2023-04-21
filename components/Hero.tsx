@@ -13,7 +13,7 @@ export default function Hero() {
 			>
 				<div className='container'>
 					<div className='flex items-center h-full'>
-						<h1 className='p-8 border border-white text-6xl uppercase text-white w-5/12'>
+						<h1 className='p-8 border border-white  text-5xl md:text-6xl uppercase text-white w-full md:w-5/12'>
 							Immersive experiences that deliver
 						</h1>
 					</div>
