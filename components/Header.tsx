@@ -5,44 +5,26 @@ import { navList } from '@/lib/data';
 import { useState } from 'react';
 
 export default function Header() {
-	const [navState, setNavState] = useState('-mt-[100vh]');
-	const openNav = () => {
-		setNavState('mt-0');
+	const [navIsOpen, setNavState] = useState(false);
+
+	const toggleNav = () => {
+		setNavState((prevState) => !prevState);
 	};
 
-	const closeNav = () => {
-		setNavState('-mt-[100vh]');
-	};
 	return (
 		<>
 			<div
-				className={`bg-black flex flex-col absolute h-full w-full z-10 py-16 px-8 ${navState} transition-all duration-500 ease-in-out md:hidden fixed`}
-				onClick={() => closeNav()}
+				className={`bg-black flex flex-col h-full w-full z-10 py-16 px-8 ${
+					navIsOpen ? 'mt-0' : '-mt-[100vh]'
+				} transition-all duration-500 ease-in-out md:hidden fixed`}
+				onClick={() => toggleNav()}
 			>
-				<div className='flex justify-between items-center'>
-					<Link href='/'>
-						<Image
-							src='/images/logo.svg'
-							alt='logo'
-							width={192}
-							height={32}
-						></Image>
-					</Link>
-					<Image
-						src='/images/icon-close.svg'
-						alt='logo'
-						width={20}
-						height={20}
-						className='cursor-pointer'
-					></Image>
-				</div>
-
 				<nav className='flex flex-col h-full justify-center'>
 					<>
 						{navList.map((item, index) => (
 							<Link
 								key={index}
-								className='mb-5 relative pb-2 text-white uppercase text-2xl hover:border-b'
+								className='mb-5 pb-2 text-white uppercase text-2xl hover:border-b'
 								href={item.path}
 							>
 								{item.name}
@@ -54,7 +36,7 @@ export default function Header() {
 			<section className='pt-16 pb-8 py-0 bg-transparent border-0 w-full absolute'>
 				<div className='container'>
 					<div className='flex justify-between items-center'>
-						<Link href='/'>
+						<Link href='/' className='z-20'>
 							<Image
 								src='/images/logo.svg'
 								alt='logo'
@@ -63,13 +45,14 @@ export default function Header() {
 							></Image>
 						</Link>
 						<Image
-							src='/images/icon-hamburger.svg'
+							src={`/images/icon-${navIsOpen ? 'close' : 'hamburger'}.svg`}
 							alt='logo'
-							width={24}
-							height={16}
-							className='cursor-pointer md:hidden'
-							onClick={() => openNav()}
+							width={navIsOpen ? '20' : '24'}
+							height={navIsOpen ? '10' : '16'}
+							className='cursor-pointer md:hidden z-20'
+							onClick={() => toggleNav()}
 						></Image>
+
 						<nav className='md:flex md:justify-end md:items-center hidden'>
 							{navList.map((item, index) => (
 								<Link
