@@ -1,15 +1,18 @@
+import Link from 'next/link';
 import ProductCard from './ProductCard';
 import { products } from '@/lib/data';
 
 export default function Products() {
 	return (
-		<section className='py-20'>
+		<section className='py-20 relative'>
 			<div className='container'>
 				<div className='flex justify-between items-center'>
 					<h2 className='uppercase pb-8 text-5xl'>Our creations</h2>
-					<button>See More</button>
+					<Link href='#' role='button'>
+						See All
+					</Link>
 				</div>
-				<div className='grid grid-cols-4 gap-y-4'>
+				<div className='flex flex-col md:flex-row flex-wrap'>
 					{products.map((product, index) => (
 						<ProductCard key={index} product={product} />
 					))}
