@@ -14,6 +14,14 @@ export default function About() {
 							alt='man with VR glasses on'
 							width={731}
 							height={500}
+							className='hidden md:inline-block'
+						></Image>
+						<Image
+							src='/images/mobile/image-interactive.jpg'
+							alt='man with VR glasses on'
+							width={654}
+							height={448}
+							className='md:hidden'
 						></Image>
 					</div>
 					<div className='md:absolute md:w-2/4 p-5 pb-0 bg-white bottom-0 right-0 text-center md:text-start'>
