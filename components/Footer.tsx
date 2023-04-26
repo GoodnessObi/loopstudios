@@ -4,7 +4,7 @@ import { navList } from '@/lib/data';
 
 export default function Footer() {
 	return (
-		<footer className='bg-black text-white py-20'>
+		<footer className='bg-black text-white py-12'>
 			<div className='container'>
 				<div className='flex flex-col items-center md:flex-row md:justify-between'>
 					<div>
@@ -29,7 +29,7 @@ export default function Footer() {
 						</nav>
 					</div>
 					<div className='mt-8 md:mt-0'>
-						<div className='mb-4 flex justify-center md:items-start'>
+						<div className='mb-4 flex justify-center md:justify-end md:items-start'>
 							<Link href='/' className='inline-block mr-4'>
 								<Image
 									src='/images/icon-facebook.svg'
@@ -54,7 +54,7 @@ export default function Footer() {
 									height={24}
 								></Image>
 							</Link>
-							<Link href='/' className='inline-block mr-4'>
+							<Link href='/' className='inline-block mr-4 md:mr-0'>
 								<Image
 									src='/images/icon-instagram.svg'
 									alt='logo'
@@ -63,7 +63,9 @@ export default function Footer() {
 								></Image>
 							</Link>
 						</div>
-						<p>© 2021 Loopstudios. All rights reserved.</p>
+						<p className='text-lp-gray'>
+							© 2021 Loopstudios. All rights reserved.
+						</p>
 					</div>
 				</div>
 			</div>
