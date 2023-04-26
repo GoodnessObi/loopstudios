@@ -24,7 +24,7 @@ export default function ProductCard({ product }: Props) {
 				fill
 				className='md:hidden object-cover'
 			></Image>
-			<p className='absolute text-white uppercase left-10 bottom-10'>
+			<p className=' font-sans absolute text-white uppercase left-10 bottom-10'>
 				{product.name}
 			</p>
 		</Link>

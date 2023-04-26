@@ -7,7 +7,7 @@ export default function Products() {
 		<section className='py-20 relative'>
 			<div className='container'>
 				<div className='flex justify-between items-center'>
-					<h2 className='uppercase pb-8 text-5xl'>Our creations</h2>
+					<h2 className='font-sans uppercase pb-8 text-5xl'>Our creations</h2>
 					<Link href='#' role='button'>
 						See All
 					</Link>

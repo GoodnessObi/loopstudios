@@ -1,9 +1,7 @@
 import './globals.css';
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
-import { Alata } from 'next/font/google';
-
-const alata = Alata({ weight: '400', preload: false });
+import { alata, josefin_sans } from './fonts';
 
 export const metadata = {
 	title: 'Loopstudios',
@@ -19,8 +17,8 @@ export default function RootLayout({
 	children: React.ReactNode;
 }) {
 	return (
-		<html lang='en'>
-			<body className={alata.className}>
+		<html lang='en' className={`${alata.variable} ${josefin_sans.variable}`}>
+			<body className='font-mono'>
 				<Header />
 				<main>{children}</main>
 				<Footer />
