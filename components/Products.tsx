@@ -12,7 +12,7 @@ export default function Products() {
 						See All
 					</Link>
 				</div>
-				<div className='flex flex-col md:flex-row flex-wrap'>
+				<div className='flex flex-col md:flex-row flex-wrap w-full gap-y-4 justify-between'>
 					{products.map((product, index) => (
 						<ProductCard key={index} product={product} />
 					))}
