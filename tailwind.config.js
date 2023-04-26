@@ -6,7 +6,18 @@ module.exports = {
 		'./components/**/*.{js,ts,jsx,tsx,mdx}',
 	],
 	theme: {
-		extend: {},
+		extend: {
+			colors: {
+				lp: {
+					gray: 'hsl(0, 0%, 55%)',
+					deepGray: 'hsl(0, 0%, 41%)',
+				},
+			},
+			fontFamily: {
+				mono: ['var(--font-alata)'],
+				sans: ['var(--font-josefin-sans)'],
+			},
+		},
 	},
 	plugins: [],
 };
