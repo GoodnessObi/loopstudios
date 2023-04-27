@@ -14,9 +14,9 @@ export default function Header() {
 	return (
 		<>
 			<div
-				className={`bg-black flex flex-col h-full w-full z-10 py-16 px-8 ${
-					navIsOpen ? 'mt-0' : '-mt-[100vh]'
-				} transition-all duration-500 ease-in-out md:hidden fixed`}
+				className={`bg-black flex flex-col min-h-[667px] h-full w-full py-16 px-6 transition-all duration-500 ease-in-out md:hidden z-10 absolute ${
+					navIsOpen ? 'translate-x-0' : '-translate-x-full'
+				}`}
 				onClick={() => toggleNav()}
 			>
 				<nav className='flex flex-col h-full justify-center'>
@@ -33,10 +33,10 @@ export default function Header() {
 					</>
 				</nav>
 			</div>
-			<section className='pt-16 pb-8 py-0 bg-transparent border-0 w-full absolute'>
+			<section className='pt-16 pb-8 py-0 bg-transparent border-0 w-full absolute z-10'>
 				<div className='container'>
 					<div className='flex justify-between items-center'>
-						<Link href='/' className='z-20'>
+						<Link href='/' className=''>
 							<Image
 								src='/images/logo.svg'
 								alt='logo'
@@ -49,7 +49,7 @@ export default function Header() {
 							alt='logo'
 							width={navIsOpen ? '20' : '24'}
 							height={navIsOpen ? '10' : '16'}
-							className='cursor-pointer md:hidden z-20'
+							className='cursor-pointer md:hidden'
 							onClick={() => toggleNav()}
 						></Image>
 
