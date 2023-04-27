@@ -17,7 +17,10 @@ export default function RootLayout({
 	children: React.ReactNode;
 }) {
 	return (
-		<html lang='en' className={`${alata.variable} ${josefin_sans.variable}`}>
+		<html
+			lang='en'
+			className={`${alata.variable} ${josefin_sans.variable} scroll-smooth`}
+		>
 			<body className='font-mono'>
 				<Header />
 				<main>{children}</main>

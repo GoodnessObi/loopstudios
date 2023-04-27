@@ -13,7 +13,7 @@ export default function Products() {
 					<Link
 						href='#'
 						role='button'
-						className='hidden md:inline-flex py-2 px-10 border-2 border-lp-deepGray uppercase text-black tracking-[0.2em]'
+						className='hidden md:inline-flex py-2 px-10 border-2 border-lp-deepGray uppercase text-black tracking-[0.2em] hover:bg-black hover:text-white hover:border-transparent transition-colours ease-in-out delay-150 duration-300'
 					>
 						See All
 					</Link>
@@ -27,7 +27,7 @@ export default function Products() {
 					<Link
 						href='#'
 						role='button'
-						className='py-2 px-10 border-2 border-lp-deepGray uppercase text-black tracking-[0.2em]'
+						className='py-2 px-10 border-2 border-lp-deepGray uppercase text-black tracking-[0.2em] hover:bg-black hover:text-white hover:border-transparent transition-colours ease-in-out delay-150 duration-300'
 					>
 						See All
 					</Link>
