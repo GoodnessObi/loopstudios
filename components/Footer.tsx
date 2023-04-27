@@ -30,8 +30,8 @@ export default function Footer() {
 					</div>
 					<div className='mt-8 md:mt-0'>
 						<div className='mb-4 flex justify-center md:justify-end md:items-end'>
-							<Link
-								href='/'
+							<a
+								href='#'
 								className='inline-block mr-4 pb-3 border-b-2 border-transparent hover:border-b-2 hover:border-white transition-all'
 							>
 								<Image
@@ -40,9 +40,9 @@ export default function Footer() {
 									width={24}
 									height={24}
 								></Image>
-							</Link>
-							<Link
-								href='/'
+							</a>
+							<a
+								href='#'
 								className='inline-block mr-4 pb-3 border-b-2 border-transparent hover:border-b-2 hover:border-white transition-all'
 							>
 								<Image
@@ -51,9 +51,9 @@ export default function Footer() {
 									width={24}
 									height={24}
 								></Image>
-							</Link>
-							<Link
-								href='/'
+							</a>
+							<a
+								href='#'
 								className='inline-block mr-4 pb-3 border-b-2 border-transparent hover:border-b-2 hover:border-white transition-all'
 							>
 								<Image
@@ -62,9 +62,9 @@ export default function Footer() {
 									width={24}
 									height={24}
 								></Image>
-							</Link>
-							<Link
-								href='/'
+							</a>
+							<a
+								href='#'
 								className='inline-block mr-4 md:mr-0 pb-3 border-b-2 border-transparent hover:border-b-2 hover:border-white transition-all'
 							>
 								<Image
@@ -73,7 +73,7 @@ export default function Footer() {
 									width={24}
 									height={24}
 								></Image>
-							</Link>
+							</a>
 						</div>
 						<p className='text-lp-gray'>
 							© 2021 Loopstudios. All rights reserved.
