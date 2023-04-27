@@ -49,7 +49,7 @@ export default function Header() {
 							alt='logo'
 							width={navIsOpen ? '20' : '24'}
 							height={navIsOpen ? '10' : '16'}
-							className='cursor-pointer md:hidden'
+							className='cursor-pointer md:hidden active:animate-spin'
 							onClick={() => toggleNav()}
 						></Image>
 

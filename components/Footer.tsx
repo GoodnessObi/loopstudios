@@ -29,8 +29,11 @@ export default function Footer() {
 						</nav>
 					</div>
 					<div className='mt-8 md:mt-0'>
-						<div className='mb-4 flex justify-center md:justify-end md:items-start'>
-							<Link href='/' className='inline-block mr-4'>
+						<div className='mb-4 flex justify-center md:justify-end md:items-end'>
+							<Link
+								href='/'
+								className='inline-block mr-4 pb-3 border-b-2 border-transparent hover:border-b-2 hover:border-white transition-all'
+							>
 								<Image
 									src='/images/icon-facebook.svg'
 									alt='logo'
@@ -38,7 +41,10 @@ export default function Footer() {
 									height={24}
 								></Image>
 							</Link>
-							<Link href='/' className='inline-block mr-4'>
+							<Link
+								href='/'
+								className='inline-block mr-4 pb-3 border-b-2 border-transparent hover:border-b-2 hover:border-white transition-all'
+							>
 								<Image
 									src='/images/icon-twitter.svg'
 									alt='logo'
@@ -46,7 +52,10 @@ export default function Footer() {
 									height={24}
 								></Image>
 							</Link>
-							<Link href='/' className='inline-block mr-4'>
+							<Link
+								href='/'
+								className='inline-block mr-4 pb-3 border-b-2 border-transparent hover:border-b-2 hover:border-white transition-all'
+							>
 								<Image
 									src='/images/icon-pinterest.svg'
 									alt='logo'
@@ -54,7 +63,10 @@ export default function Footer() {
 									height={24}
 								></Image>
 							</Link>
-							<Link href='/' className='inline-block mr-4 md:mr-0'>
+							<Link
+								href='/'
+								className='inline-block mr-4 md:mr-0 pb-3 border-b-2 border-transparent hover:border-b-2 hover:border-white transition-all'
+							>
 								<Image
 									src='/images/icon-instagram.svg'
 									alt='logo'
